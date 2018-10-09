@@ -1,7 +1,7 @@
-#check github
 
+
+import datetime as dt
 from datetime import datetime
-from datetime import date
 
 #add5 to a number
 def plus_five(x):
@@ -26,18 +26,17 @@ def has_string(maryhad, s):
         yield i
         i = s.find("Mary had", i+1)
 
+
 #convert a string to a date 2018-09-03 always in this format
-def to_date(date_str):
-	date_str = '02/08/2010' 
-	format_str = '%d/%m/%Y'
-	datetime_obj = datetime.strptime(date_str, format_str)
+def to_date(dt):
+	return datetime.strptime(dt, "%Y-%m-%d").date()
 	print(datetime_obj.date())
 
 #find the number of days between two dates
 def date_diff(date1, date2):
 	# date1 = date(2008, 9, 1)
 	# date2 = date(2018, 9, 2)
-	# delta = date1 - date2
+	delta = date1 - date2
 	print(date1, date2)
 
 #find the number of days between Sept 1st this year and the mayan end of the world 	

@@ -2,8 +2,8 @@
 #begin tdd
 import t_tdd2
 import unittest
+import datetime as dt
 from datetime import datetime
-
 
 class Testt_tdd2(unittest.TestCase):
 
@@ -30,7 +30,17 @@ class Testt_tdd2(unittest.TestCase):
 							 "a little lamb",
 							 "little lamb",
 							 "Whose fleece",
-							],"Mary"))
+							],"Mary had"))
+
+	def test_string(self):
+		self.assertTrue(["a little lamb",
+							 "little lamb",],
+						t_tdd2.has_string(
+							["Mary had",
+							 "a little lamb",
+							 "little lamb",
+							 "Whose fleece",
+							],"little"))
 
 
 		#isinstance returns a Boolean stating whether the object is an instance or subclass of another object.
@@ -60,9 +70,9 @@ class Testt_tdd2(unittest.TestCase):
 		self.assertTrue("c",t_tdd2.contains(['a','b','d']))
 
 		# add the contents of a list
-	def listcontents(self):
+	def test_listcontents(self):
 		self.assertEqual(6, t_tdd2.add_contents([1,2,3]))
 
 			
-	def key_mine(self):
+	def test_key_mine(self):
 		self.assertEqual('one mine', t_tdd2.lookup({1:'one', 2:'two', 3:'three'}, 1))
