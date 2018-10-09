@@ -3,6 +3,19 @@ import openpyxl
 wb = openpyxl.load_workbook('cSpace_Bookingv1.xlsx')
 sheet = wb["Clients"]
 
+def cell_has_value(ws, row, col):
+    if row > sheet.max_row:
+        return False
+    if col > sheet.max_column:
+        return False
+    if not sheet.cell(row=row, column=col).value:
+        return False
+    if not sheet.cell(row=row, column=col).value.strip():
+        return False
+
+    return True
+
+
 nameslist = []
 
 for cell in sheet['A']:
