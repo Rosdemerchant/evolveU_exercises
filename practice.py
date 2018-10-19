@@ -1,11 +1,11 @@
 
 #find the biggest #
 def bigger(a, b):
-
-	if a > b:
-		return a
-	else:
-		return b
+	return 0
+	# if a > b:
+	# 	return a
+	# else:
+	# 	return b
 
 #find the biggest # in a list
 def biglist(listx):
