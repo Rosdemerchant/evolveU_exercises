@@ -1,51 +1,80 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-<script>
-function myFunction() {
-    document.getElementById("demo").innerHTML = "Hello World, my name is Ros";
-    console.log("hellooooo worldddddd");
-}
-
-function goodbye() {
-    document.getElementById("demo").innerHTML = "Hello World, my name is Ros";
-    console.log("hello worldddddd");
-}
-
-function goodbye() {
-    document.getElementById("demo").innerHTML = 
-    "Basic JavaScript";
-    "Declare variables";
-    "var myName;";
-    console.log("hello worldddddd");
-}
-</script>
-</head>
-
-<body>
-
-<h1>A Web Page</h1>
-<p id="demo">A Paragraph</p>
-<button type="button" onclick="myFunction()">Try it</button>
-<button type="button" onclick="goodbye()">Goodbye World</button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
+   <head>
+      <script>
+         function myFunction() {
+             document.getElementById("demo").innerHTML = "Paragraph changed.";
+             
+            	"Uninitialized Variables: var a = 2";
+         }
+      </script>
+   </head>
+   <body>
+      <h1>JavaScript</h1>
+      <button type="button" onclick="myFunction()">Try it</button>
+      <h2><br><br>Basic Javasript<br></br></h2>
+      <h2>Strings</h2>
+      <p>In JavaScript, String values are immutable, which means that they cannot be altered once created.
+         <br>
+         For example, the following code:
+         </br> <br>
+         var myStr = "Bob";
+         myStr[0] = "J"; 
+         </br>
+         <br>cannot change the value of myStr to "Job", because the contents of myStr cannot be altered.</br> <br>
+         Note that this does not mean that myStr cannot be changed, just that the individual characters of a string literal cannot be changed. The only way to change myStr would be to assign it with a new string, like this:</br>
+         var myStr = "Bob";
+         myStr = "Job";
+      </p>
+      <h2>Arrays</h2>
+      <p>
+         <br>Unlike strings, the entries of arrays are mutable and can be changed freely.</br>
+         <br>Access Multi-Dimensional Arrays With Indexes</br>
+         <br>One way to think of a multi-dimensional array, is as an array of arrays. When you use brackets to access your array, the first set of brackets refers to the entries in the outer-most (the first level) array, and each additional pair of brackets refers to the next level of entries inside.</br>
+         <br>var arr = [
+         [1,2,3],
+         [4,5,6],
+         [7,8,9],
+         [[10,11,12], 13, 14]
+         ];
+         arr[3]; // equals [[10,11,12], 13, 14]
+         arr[3][0]; // equals [10,11,12]
+         arr[3][0][1]; // equals 11</br>
+         <br> Manipulate Arrays with push(), pop(),shift(), unshift()</br>
+      <h2>Functions</h2>
+      <p><br>
+         Create a function timesFive that accepts one argument, multiplies it by 5, and returns the new value.</br>
+         <br>function timesFive(num) {
+         return num * 5; </br>
+         <br><br>}</br></br>
+         <br>how to test the timesFive function:    console.log(minusSeven(10));</br>
+      </p>
+      <p> <br>Everything to the right of the equal sign is resolved before the value is assigned. This means we can take the return value of a function and assign it to a variable.</br>
+         </br>Assume we have pre-defined a function sum which adds two numbers together, then:</br>
+         <br>ourSum = sum(5, 12);</br>
+         <br>will call sum function, which returns a value of 17 and assigns it to ourSum variable.</br>
+         <br>Call the processArg function with an argument of 7 and assign its return value to the variable processed.</br>
+         <br>var processed = 2;</br>
+         <br>function processArg(num) {</br>
+         <br>processed = processArg(7);</br>
+         <br>}</br>
+      </p>
+      <p>
+      <h2><b>Stand in Line</b></h2>
+      <br>In Computer Science a queue is an abstract Data Structure where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.</br>
+      <br>Write a function nextInLine which takes an array (arr) and a number (item) as arguments.</br>
+      <br>Add the number to the end of the array, then remove the first element of the array.</br>
+      <br>The nextInLine function should then return the element that was removed.</br>
+      <br>function nextInLine(arr, item) {</br>
+      <br>arr.push(item);</br>
+      <br>var removed = arr.shift():</br>
+      <br>return removed;</br>
+      <br>}</br>
+      <br>Test Setup</br>
+      <br>var testArr = [1,2,3,4,5];</br>
+      <br>//Display Code</br>
+      <br>console.log("Before: " + JSON.stringify(testArr));</br>
+      <br>console.log(nextInLine(testArr, 6)); // Modify this line to test</br>
+      <br>console.log("After: " + JSON.stringify(testArr));</br>
+   </body>
 </html>

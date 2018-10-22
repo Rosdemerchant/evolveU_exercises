@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Paragraph changed.";
+    
+   	"Uninitialized Variables: var a = 2";
+}
+</script>
+</head>
+
+<body>
+
+<h1>JavaScript</h1>
+<p id="demo">A Paragraph</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<h2<b>Basic Javasript</b></h2>
+<h2<b>Strings</b></h2>
+<p>In JavaScript, String values are immutable, which means that they cannot be altered once created.
+<br>
+For example, the following code:
+</br> <br>
+var myStr = "Bob";
+myStr[0] = "J"; 
+</br>
+<br>cannot change the value of myStr to "Job", because the contents of myStr cannot be altered.</br> <br>
+Note that this does not mean that myStr cannot be changed, just that the individual characters of a string literal cannot be changed. The only way to change myStr would be to assign it with a new string, like this:</br>
+var myStr = "Bob";
+myStr = "Job";</p>
+
+<h2>Arrays</h2>
+<p>
+	<br>Unlike strings, the entries of arrays are mutable and can be changed freely.</br>
+	<br>Access Multi-Dimensional Arrays With Indexes</br>
+	<br>One way to think of a multi-dimensional array, is as an array of arrays. When you use brackets to access your array, the first set of brackets refers to the entries in the outer-most (the first level) array, and each additional pair of brackets refers to the next level of entries inside.</br>
+	<br>var arr = [
+  [1,2,3],
+  [4,5,6],
+  [7,8,9],
+  [[10,11,12], 13, 14]
+];
+arr[3]; // equals [[10,11,12], 13, 14]
+arr[3][0]; // equals [10,11,12]
+arr[3][0][1]; // equals 11</br>
+<br> Manipulate Arrays with push(), pop(),shift(), un
+
+
+
+</body>
+</html>
