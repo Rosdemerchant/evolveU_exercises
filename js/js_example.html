@@ -1,43 +1,88 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <script>
-         function myFunction() {
-             document.getElementById("demo").innerHTML = "Paragraph changed.";
-         }
-         function strings() {
-            console.log("Strings");
-         }    
-         strings();
-         
-         function strings_two() {
-            document.getElementById("demo").innerHTML = "Strings";
-         }
-         
-      </script>
-   </head>
-   <body>
+
+<script>  
+alert('Hello Larry!');
+
+var array_ros = [1,2,3,4];
+
+function array_list() {
+   console.log("this is my array", array_ros);
+}
+
+function array_push() {
+   array_ros.push('ros');
+}
+
+function array_pop() {
+   array_ros.pop();
+}
+
+function array_shift() {
+   array_ros.shift();
+}
+
+function array_unshift() {
+   array_ros.unshift('ros');
+}
+var str_bun = '"Sunny Bunny"';
+str_bun[0] = "F";
+function str_of_bun() {
+   console.log("this is Bunny's string:", str_bun);
+}
+ // <button type="button" onclick="str_of_bun()">show string</button></br>
+var str_bun = "Sunny Bunny"; var str_bun = "Funny Bunny";
+function new_bun_str() {
+   console.log("Sunny changed to Funny because new string created")
+}
+
+function sum_of_two(a,b) {  
+   console.log(a + b);
+
+}
+
+var isEqual = "3"
+function checkThree() {
+
+  if (isEqual == 3) 
+   console.log(isEqual);
+  }
+var notEqual = "4"
+function checkFour() {
+   if (notEqual === 4 )
+      console.log(notEqual);
+}
+
+
+</script>
+
+
+</html>
+
+
       <h1>JavaScript</h1>
-      <button type="button" onclick="myFunction()">Try it</button>
-      <p id="demo">A Paragraph</p>
-      <button type="button" onclick="strings_two()">Strings</button>
+
       <h2><br><br>Basic Javasript<br></br></h2>
       <h2>Strings</h2>
       <p>In JavaScript, String values are immutable, which means that they cannot be altered once created.
          <br>
          For example, the following code:
-         </br> <br>
-         var myStr = "Bob";
-         myStr[0] = "J"; 
-         </br>
-         <br>cannot change the value of myStr to "Job", because the contents of myStr cannot be altered.</br> <br>
-         Note that this does not mean that myStr cannot be changed, just that the individual characters of a string literal cannot be changed. The only way to change myStr would be to assign it with a new string, like this:</br>
-         var myStr = "Bob";
-         myStr = "Job";
+         </br><br>
+         var str_bun = '"Sunny Bunny"';
+         str_bun[0] = "F";
+         </br><br>
+         <button type="button" onclick="str_of_bun()">show string</button></br>
+         <br>cannot change the value of str_bun to "Funny Bunny", because the contents of str_bun cannot be altered.</br> <br>
+         Note that this does not mean that str_bun cannot be changed, just that the individual characters of a string literal cannot be changed. The only way to change str_bun would be to assign it with a new string, like this:</br>
+         <br>var str_bun = "Sunny Bunny"; var str_bun = "Funny Bunny";</br>
+         <br>
+         <button type="button" onclick="new_bun_str()">change string</button></br>
+      <br>A string can be any text inside double or single quotes.</b>
+
       </p>
-      <h2>Arrays</h2>
-      <p>
-         <br>Unlike strings, the entries of arrays are mutable and can be changed freely.</br>
+<h2>Arrays</h2>
+
+        <p> Unlike strings, the entries of arrays are mutable and can be changed freely.
          <br>Access Multi-Dimensional Arrays With Indexes</br>
          <br>One way to think of a multi-dimensional array, is as an array of arrays. When you use brackets to access your array, the first set of brackets refers to the entries in the outer-most (the first level) array, and each additional pair of brackets refers to the next level of entries inside.</br>
          <br>var arr = [
@@ -49,45 +94,44 @@
          arr[3]; // equals [[10,11,12], 13, 14]
          arr[3][0]; // equals [10,11,12]
          arr[3][0][1]; // equals 11</br>
-         <br> Manipulate Arrays with push(), pop(),shift(), unshift()</br>
+         <br> Manipulate Arrays: </br></br>
+         <button type="button" onclick="array_list()">Show Array</button><br><br>push() <button type="button" onclick="array_push()">Push</button>,</br><br>pop() <button type="button" onclick="array_pop()">Pop</button>,</br><br>,shift() <button type="button" onclick="array_shift()">Shift</button>,</br><br> unshift() <button type="button" onclick="array_unshift()">Unshift</button></br>
       <h2>Functions</h2>
-      <p><br>
-         Create a function timesFive that accepts one argument, multiplies it by 5, and returns the new value.</br>
-         <br>function timesFive(num) {
-         return num * 5; </br>
-         <br><br>}</br></br>
-         <br>how to test the timesFive function:    console.log(minusSeven(10));</br>
-      </p>
-      <p> <br>Everything to the right of the equal sign is resolved before the value is assigned. This means we can take the return value of a function and assign it to a variable.</br>
-         </br>Assume we have pre-defined a function sum which adds two numbers together, then:</br>
-         <br>ourSum = sum(5, 12);</br>
-         <br>will call sum function, which returns a value of 17 and assigns it to ourSum variable.</br>
-         <br>Call the processArg function with an argument of 7 and assign its return value to the variable processed.</br>
-         <br>var processed = 2;</br>
-         <br>function processArg(num) {</br>
-         <br>processed = processArg(7);</br>
-         <br>}</br>
-      </p>
+   <button type="button" onclick="checkThree()">Equal Comp.</button>
       <p>
-      <h2><b>Stand in Line</b></h2>
-      <br>A queue is an abstract Data Structure where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.</br>
-      <br>Write a function nextInLine which takes an array (arr) and a number (item) as arguments.</br>
-      <br>Add the number to the end of the array, then remove the first element of the array.</br>
-      <br>The nextInLine function should then return the element that was removed.</br>
-      <br>function nextInLine(arr, item) {</br>
-      <br>arr.push(item);</br>
-      <br>var removed = arr.shift():</br>
-      <br>return removed;</br>
-      <br>}</br>
-      <br>Test Setup</br>
-      <br>var testArr = [1,2,3,4,5];</br>
-      <br>//Display Code</br>
-      <br>console.log("Before: " + JSON.stringify(testArr));</br>
-      <br>console.log(nextInLine(testArr, 6)); // Modify this line to test</br>
-      <br>console.log("After: " + JSON.stringify(testArr));</br>
-      <br>Reminders:</br>
-      <br> The push () method adds an item to the end of an array.</br>
-      <br> The shift() method removes the first element of an array.  It also returns the element it removed.</br>
+         Passing Values to Functions with Arguments
+         <br>Here is a function that accepts two arguments and outputs their sum to the dev console.</br>
+         <br>function ourFunctiowithArgs(a, b) {<br>
+         console.log(a + b);   
+         </br> <br> }</br><br>ourFunctionwithArgs(10, 5);</br><br>
+      </br><button type="button" onclick="sum_of_two(10,5)">function</button></br>
+      </p>
+   
+
+<h2>Comparison with Equality and Strict Equality Operators</h2>
+<p>
+  The most basic operator is the equality operator ==. The equality operator compares two values and returns true if they're equivalent or false if they are not. Note that equality is different from assignment (=), which assigns the value at the right of the operator to a variable in the left.
+  </p>
+  <h2>Type Coercion</h2>
+  <p>
+   In order for JavaScript to compare two different data types (for example, numbers and strings), it must convert one type to another. This is known as "Type Coercion". Once it does, however, it can compare terms as follows:
+</p>
+<p>
+   1 == 1 // true<br>
+</br>1 == 2 // false<br>
+</br>1 == '1' // true<br>
+</br>"3" == 3 // true
+<button type="button" onclick="checkThree()">Equal Comp.</button>
+</p>
+<p>
+Strict equality (===) is the counterpart to the <b>equality operator (==).</b> However, unlike the equality operator, which attempts to convert both values being compared to a common type, the strict equality operator does not perform a type conversion.
+</p><p>
+If the values being compared have different types, they are considered unequal, and the <b>strict equality operator</b> will return false.
+<p>
+4 === 4 // true<br>
+</br>4 === "4" // false
+<button type="button" onclick="checkFour()">notEqual Comp.</button>
+</p>
 
    </body>
 </html>
