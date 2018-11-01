@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "7fddd2cfe60d19c00eaa18686591afac312bbbac48c09742ecd5f02b4c66d4c9"
+            "sha256": "eb1bda86860b7c82b065967f77aeb1363528d9f80aa544906a1bb36fb50af21f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -31,11 +31,20 @@
             "index": "pypi",
             "version": "==1.0.2"
         },
+        "flask-api": {
+            "hashes": [
+                "sha256:6f9dc56d55fd82ffb1c5c9fd794cd6c50873ac10cf662e26817c179a655d1e22",
+                "sha256:fc10a80a13ea6fcf04acc2b1835aea05ec44aa6ae94f2ee85e52cd068567ce35"
+            ],
+            "index": "pypi",
+            "version": "==1.0"
+        },
         "itsdangerous": {
             "hashes": [
-                "sha256:cbb3fcf8d3e33df861709ecaf89d9e6629cff0a217bc2848f1b41cd30d360519"
+                "sha256:321b033d07f2a4136d3ec762eac9f16a10ccd60f53c0c91af90217ace7ba1f19",
+                "sha256:b12271b2047cb23eeb98c8b5622e2e5c5e9abd9784a153e9d8ef9cb4dd09d749"
             ],
-            "version": "==0.24"
+            "version": "==1.1.0"
         },
         "jinja2": {
             "hashes": [

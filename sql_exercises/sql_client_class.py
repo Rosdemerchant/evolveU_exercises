@@ -11,6 +11,14 @@ class SqlClient:
 		self.birth_year = birth_year
 		self.credits = credits
 
+	# def getClient( conn, id ):
+	# 	cur = conn.cursor()
+	# 	a = "SELECT * FROM clients where client_id = "+id
+	# 	print(a)
+	# 	cur.execute(a)
+	# 	return cur.fetchall()
+
+
 	@staticmethod
 	def client_sql_queries(sql):
 		allClients=[]
@@ -26,6 +34,17 @@ class SqlClient:
 		conn.close()
 
 		return allClients
+
+	@staticmethod
+	def getClient(id):
+		conn = psycopg2.connect('dbname=evolveu')
+		cur = conn.cursor()
+		a = "SELECT * FROM clients where client_id = "+id
+		cur.execute(a)
+		b = cur.fetchall()
+		cur.close()
+		conn.close()
+		return b
 	
 	@staticmethod
 	def credit_sql_queries_two(sql):

@@ -1,8 +1,15 @@
 
 from flask import Flask, render_template
 import sql_client_class
+import psycopg2
+import json
 
 app = Flask(__name__)
+
+@app.route('/client/<id>')
+def client(id):
+	client = sql_client_class.SqlClient.getClient(id)
+	return json.dumps({'client_id':client[0][0], 'name':client[0][1], 'email':client[0][2], 'city':client[0][3]})
 
 @app.route('/allclients')
 def get_all_clients():
