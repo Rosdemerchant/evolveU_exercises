@@ -1,0 +1,33 @@
+
+.top {
+width: 100%;
+border: 1px solid black;
+min-height: 150px;
+
+}
+
+.left, .right {
+width: 50%;
+height: 500px;
+background: yellow;
+float: left;
+}
+
+.left {
+	background: blue;
+}
+
+.bottom {
+width: 100%;
+height: 150px;
+border: 1px solid black;
+clear: both;
+
+}
+.adddiv {
+width: 150px;
+height: 150px;
+border: 1px solid black;
+float: left;
+
+}
